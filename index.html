@@ -182,15 +182,51 @@
         }
 
         .gradient-text {
-            background: linear-gradient(
-                110deg,
-                #FFFFFF 20%,
-                #A5B4FC 52%,
-                #38BDF8 100%
-            );
+            display: inline-block;
+            background:
+                linear-gradient(
+                    110deg,
+                    #FFFFFF 0%,
+                    #38BDF8 45%,
+                    #6366F1 100%
+                );
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
             -webkit-background-clip: text;
             background-clip: text;
+            -webkit-text-fill-color: transparent;
             color: transparent;
+            position: relative;
+        }
+
+        .hero h1 .gradient-text {
+            background:
+                linear-gradient(
+                    110deg,
+                    #FFFFFF 0%,
+                    #38BDF8 40%,
+                    #6366F1 70%,
+                    #FFFFFF 82%,
+                    #38BDF8 100%
+                );
+            background-size: 250% 100%;
+            background-position: 0% 50%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientSweep 5s ease-in-out infinite;
+        }
+
+        @keyframes gradientSweep {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         .hero-subtitle {
@@ -642,11 +678,7 @@
                 GrooveLink for Windows
             </div>
 
-            <h1>
-                <span class="gradient-text">Trade.</span>
-                <br>
-                Track. Prove. Grow.
-            </h1>
+            <h1><span class="gradient-text">Trade.<br>Track. Prove. Grow.</span></h1>
 
             <p class="hero-subtitle">
                 A modern trading workspace built to connect your performance,
@@ -902,3 +934,6 @@
 
 </body>
 </html>
+
+
+
