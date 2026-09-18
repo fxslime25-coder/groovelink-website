@@ -1,0 +1,4 @@
+﻿User-agent: *
+Allow: /
+
+Sitemap: https://fxslime25-coder.github.io/groovelink-website/sitemap.xml
