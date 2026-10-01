@@ -1,0 +1,42 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420">
+  <rect width="1200" height="420" rx="48" fill="#070B14"/>
+
+  <rect x="60" y="60" width="300" height="300" rx="70" fill="#2563EB"/>
+
+  <path
+    d="M145 210
+       C145 153 188 110 245 110
+       C283 110 316 126 338 151
+       L300 193
+       C286 178 268 169 245 169
+       C216 169 197 186 190 210
+       C197 234 216 251 245 251
+       C268 251 286 242 300 227
+       L338 269
+       C316 294 283 310 245 310
+       C188 310 145 267 145 210Z"
+    fill="#F8FAFC"
+  />
+
+  <circle cx="245" cy="210" r="22" fill="#22C55E"/>
+
+  <text
+    x="405"
+    y="205"
+    fill="#F8FAFC"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="92"
+    font-weight="800"
+    letter-spacing="7"
+  >GROOVELINK</text>
+
+  <text
+    x="409"
+    y="274"
+    fill="#94A3B8"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="34"
+    font-weight="600"
+    letter-spacing="4"
+  >TRADE. TRACK. PROVE. GROW.</text>
+</svg>

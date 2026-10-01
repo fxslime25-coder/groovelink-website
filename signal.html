@@ -1,0 +1,533 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GrooveLink — Trading Signal</title>
+
+    <meta
+        name="description"
+        content="View this published trading signal on GrooveLink."
+    >
+
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="groovelink-logo.svg"
+    >
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="GrooveLink — Trading Signal">
+    <meta
+        property="og:description"
+        content="View this published trading signal on GrooveLink."
+    >
+    <meta property="og:site_name" content="GrooveLink">
+    <meta
+        property="og:image"
+        content="https://fxslime25-coder.github.io/groovelink-website/groovelink-logo.svg"
+    >
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GrooveLink — Trading Signal">
+    <meta
+        name="twitter:description"
+        content="View this published trading signal on GrooveLink."
+    >
+    <meta
+        name="twitter:image"
+        content="https://fxslime25-coder.github.io/groovelink-website/groovelink-logo.svg"
+    >
+
+    <style>
+        :root {
+            --bg: #070B14;
+            --panel: #0D1626;
+            --card: #111827;
+            --border: #1E293B;
+            --text: #F8FAFC;
+            --muted: #94A3B8;
+            --primary: #2563EB;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background:
+                radial-gradient(
+                    circle at top,
+                    #16233D 0%,
+                    var(--bg) 58%
+                );
+            color: var(--text);
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        .page {
+            width: min(940px, calc(100% - 24px));
+            margin: auto;
+            padding: 28px 0 60px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 26px;
+        }
+
+        .brand-logo {
+            width: 58px;
+            height: 58px;
+            border-radius: 16px;
+            object-fit: cover;
+        }
+
+        .brand-name {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            margin-top: 3px;
+            color: var(--muted);
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+        .card {
+            background: rgba(13, 22, 38, 0.97);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.42);
+        }
+
+        .eyebrow {
+            margin-bottom: 12px;
+            color: #60A5FA;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(32px, 6vw, 54px);
+            line-height: 1;
+        }
+
+        .publisher {
+            margin: 14px 0 24px;
+            color: var(--muted);
+        }
+
+        .publisher strong {
+            color: var(--text);
+        }
+
+        .direction {
+            display: inline-block;
+            margin-bottom: 24px;
+            padding: 9px 15px;
+            border-radius: 999px;
+            background: var(--primary);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .item {
+            padding: 17px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: var(--card);
+        }
+
+        .label {
+            margin-bottom: 8px;
+            color: var(--muted);
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+        }
+
+        .value {
+            font-size: 18px;
+            font-weight: 700;
+            word-break: break-word;
+        }
+
+        .comments {
+            margin-top: 18px;
+            padding: 18px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: var(--card);
+        }
+
+        .comments-text {
+            white-space: pre-wrap;
+            line-height: 1.6;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 28px;
+            padding-top: 22px;
+            border-top: 1px solid var(--border);
+        }
+
+        .signal-number {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .site-button {
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 12px;
+            background: var(--primary);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .state {
+            padding: 80px 20px;
+            color: var(--muted);
+            text-align: center;
+        }
+
+        .error {
+            color: #FCA5A5;
+        }
+
+        @media (max-width: 640px) {
+            .page {
+                width: calc(100% - 20px);
+                padding-top: 18px;
+            }
+
+            .card {
+                padding: 22px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <header class="brand">
+        <img
+            class="brand-logo"
+            src="groovelink-logo.svg"
+            alt="GrooveLink"
+        >
+
+        <div>
+            <div class="brand-name">GROOVELINK</div>
+            <div class="tagline">TRADE. TRACK. PROVE. GROW.</div>
+        </div>
+    </header>
+
+    <main class="card">
+
+        <div id="loading" class="state">
+            Loading GrooveLink signal...
+        </div>
+
+        <div id="error" class="state error" hidden>
+            Unable to load this public signal.
+        </div>
+
+        <section id="signal" hidden>
+
+            <div class="eyebrow">
+                GROOVELINK · TRADING SIGNAL
+            </div>
+
+            <h1 id="symbol">—</h1>
+
+            <div class="publisher">
+                Published by:
+                <strong id="publisher">—</strong>
+            </div>
+
+            <div id="direction" class="direction">—</div>
+
+            <div class="grid">
+
+                <div class="item">
+                    <div class="label">Entry</div>
+                    <div id="entry" class="value">—</div>
+                </div>
+
+                <div class="item">
+                    <div class="label">Stop Loss</div>
+                    <div id="stop_loss" class="value">—</div>
+                </div>
+
+                <div class="item">
+                    <div class="label">TP1</div>
+                    <div id="tp1" class="value">—</div>
+                </div>
+
+                <div class="item">
+                    <div class="label">TP2</div>
+                    <div id="tp2" class="value">—</div>
+                </div>
+
+                <div class="item">
+                    <div class="label">TP3</div>
+                    <div id="tp3" class="value">—</div>
+                </div>
+
+                <div class="item">
+                    <div class="label">Timeframe</div>
+                    <div id="timeframe" class="value">—</div>
+                </div>
+
+                <div class="item">
+                    <div class="label">Session</div>
+                    <div id="session" class="value">—</div>
+                </div>
+
+                <div class="item">
+                    <div class="label">Status</div>
+                    <div id="status" class="value">—</div>
+                </div>
+
+            </div>
+
+            <div id="comments_wrap" class="comments" hidden>
+                <div class="label">Publisher Notes</div>
+                <div id="comments" class="comments-text"></div>
+            </div>
+
+            <div class="footer">
+                <div class="signal-number">
+                    Signal #<span id="signal_id">—</span>
+                    · Powered by GrooveLink
+                </div>
+
+                <a
+                    class="site-button"
+                    href="https://fxslime25-coder.github.io/groovelink-website/"
+                >
+                    View in GrooveLink
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script>
+const API_URL = "https://groovelink-api.onrender.com";
+
+const query = new URLSearchParams(
+    window.location.search
+);
+
+const signalId = query.get("id");
+
+function display(value) {
+    if (
+        value === null ||
+        value === undefined ||
+        value === ""
+    ) {
+        return "—";
+    }
+
+    return String(value);
+}
+
+function price(value) {
+    if (
+        value === null ||
+        value === undefined ||
+        value === ""
+    ) {
+        return "—";
+    }
+
+    const number = Number(value);
+
+    return Number.isFinite(number)
+        ? number.toString()
+        : String(value);
+}
+
+function showError(message) {
+    document.getElementById("loading").hidden = true;
+
+    const error = document.getElementById("error");
+    error.hidden = false;
+    error.textContent = message;
+}
+
+async function loadSignal() {
+
+    if (!signalId) {
+        showError("No signal ID was provided.");
+        return;
+    }
+
+    try {
+
+        const response = await fetch(
+            API_URL +
+            "/api/public/signals/" +
+            encodeURIComponent(signalId)
+        );
+
+        const data = await response.json();
+
+        if (
+            !response.ok ||
+            !data.success ||
+            !data.signal
+        ) {
+            throw new Error(
+                data.message || "Signal unavailable."
+            );
+        }
+
+        const signal = data.signal;
+
+        const symbol = display(signal.symbol);
+        const direction = display(
+            signal.signal_type
+        ).toUpperCase();
+
+        document.title =
+            "GrooveLink — " +
+            symbol +
+            " " +
+            direction;
+
+        document.getElementById(
+            "symbol"
+        ).textContent = symbol;
+
+        document.getElementById(
+            "publisher"
+        ).textContent = display(
+            signal.publisher
+        );
+
+        document.getElementById(
+            "direction"
+        ).textContent = direction;
+
+        document.getElementById(
+            "entry"
+        ).textContent = price(
+            signal.entry_price
+        );
+
+        document.getElementById(
+            "stop_loss"
+        ).textContent = price(
+            signal.stop_loss
+        );
+
+        document.getElementById(
+            "tp1"
+        ).textContent = price(signal.tp1);
+
+        document.getElementById(
+            "tp2"
+        ).textContent = price(signal.tp2);
+
+        document.getElementById(
+            "tp3"
+        ).textContent = price(signal.tp3);
+
+        document.getElementById(
+            "timeframe"
+        ).textContent = display(
+            signal.timeframe
+        );
+
+        document.getElementById(
+            "session"
+        ).textContent = display(
+            signal.session
+        );
+
+        document.getElementById(
+            "status"
+        ).textContent = display(
+            signal.status
+        ).toUpperCase();
+
+        document.getElementById(
+            "signal_id"
+        ).textContent = display(
+            signal.id
+        );
+
+        if (signal.comments) {
+            document.getElementById(
+                "comments"
+            ).textContent = signal.comments;
+
+            document.getElementById(
+                "comments_wrap"
+            ).hidden = false;
+        }
+
+        document.getElementById(
+            "loading"
+        ).hidden = true;
+
+        document.getElementById(
+            "signal"
+        ).hidden = false;
+
+    } catch (error) {
+
+        console.error(
+            "GrooveLink public signal error:",
+            error
+        );
+
+        showError(
+            "This signal could not be loaded."
+        );
+    }
+}
+
+loadSignal();
+</script>
+
+</body>
+</html>
